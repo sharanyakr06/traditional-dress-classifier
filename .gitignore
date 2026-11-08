@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+/.sf/
+.streamlit/
+
+# Training data is not needed to run the deployed website.
+/kerala/
+/punjab/
+/rajasthan/

@@ -1,0 +1,56 @@
+{
+  "model": "resnet50_augmented_finetuned_best.keras",
+  "test_csv": "test.csv",
+  "test_samples": 73,
+  "accuracy": 0.8904109589041096,
+  "classification_report": {
+    "Kerala": {
+      "precision": 0.896551724137931,
+      "recall": 1.0,
+      "f1-score": 0.9454545454545454,
+      "support": 26.0
+    },
+    "Punjab": {
+      "precision": 1.0,
+      "recall": 0.6521739130434783,
+      "f1-score": 0.7894736842105263,
+      "support": 23.0
+    },
+    "Rajasthan": {
+      "precision": 0.8275862068965517,
+      "recall": 1.0,
+      "f1-score": 0.9056603773584906,
+      "support": 24.0
+    },
+    "accuracy": 0.8904109589041096,
+    "macro avg": {
+      "precision": 0.9080459770114943,
+      "recall": 0.8840579710144928,
+      "f1-score": 0.8801962023411875,
+      "support": 73.0
+    },
+    "weighted avg": {
+      "precision": 0.9064714218233348,
+      "recall": 0.8904109589041096,
+      "f1-score": 0.8832268763734804,
+      "support": 73.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      26,
+      0,
+      0
+    ],
+    [
+      3,
+      15,
+      5
+    ],
+    [
+      0,
+      0,
+      24
+    ]
+  ]
+}

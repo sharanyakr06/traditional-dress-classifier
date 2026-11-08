@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4efe7">
+    <title>Traditional Dress Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="intro">
+        <p class="eyebrow">A little journey through Indian textiles</p>
+        <h1>Traditional Dress<br>Classifier</h1>
+        <p class="intro-copy">
+          Upload a traditional dress photo to see whether its style is associated
+          with Kerala, Punjab, or Rajasthan.
+        </p>
+      </header>
+
+      <section class="classifier-card" aria-labelledby="upload-heading">
+        <div class="section-heading">
+          <span class="step-number">01</span>
+          <div>
+            <h2 id="upload-heading">Choose your image</h2>
+            <p>Use a clear JPG, JPEG, or PNG photo (up to 4 MB).</p>
+          </div>
+        </div>
+
+        <form id="prediction-form">
+          <label class="upload-area" id="upload-area" for="image-input">
+            <span class="upload-icon" aria-hidden="true">↑</span>
+            <span class="upload-main" id="upload-main">Click to choose an image</span>
+            <span class="upload-hint" id="upload-hint">or drag and drop it here</span>
+            <input id="image-input" name="image" type="file" accept=".jpg,.jpeg,.png,image/jpeg,image/png" required>
+          </label>
+
+          <div class="preview-wrap" id="preview-wrap" hidden>
+            <img id="image-preview" alt="Selected image preview">
+            <button class="remove-button" id="remove-image" type="button" aria-label="Remove selected image">×</button>
+          </div>
+
+          <button class="submit-button" id="submit-button" type="submit" disabled>
+            <span id="button-label">Analyze image</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        </form>
+
+        <p class="status-message" id="status-message" role="status" aria-live="polite" hidden></p>
+
+        <section class="result" id="result" aria-live="polite" hidden>
+          <div class="result-heading">
+            <span class="step-number">02</span>
+            <p class="eyebrow">Your result</p>
+          </div>
+          <h2 class="prediction" id="prediction"></h2>
+        </section>
+      </section>
+
+      <footer>Predictions are estimates from an image model, not cultural identification.</footer>
+    </main>
+  </body>
+</html>
